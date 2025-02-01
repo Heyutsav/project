@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+
+    <div class="sidebar">
+      <h2>Expense Tracker</h2>
+      <ul>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      
+      <div class="header">
+        <h1>Monthly Budget</h1>
+        <div class="header-icons">
+          <span class="icon">🔔</span>
+          <span class="icon">⚙️</span>
+        </div>
+      </div>
+
+      
+      <div class="card">
+        <h3>Set Monthly Income and Target</h3>
+        <input type="number" id="incomeInput" placeholder="Enter monthly income" />
+        <button id="setIncome">Set Income</button>
+        <input type="number" id="expenseTargetInput" placeholder="Enter expense target" />
+        <button id="setExpenseTarget">Set Target</button>
+        <p id="alertMessage" class="alert-message"></p>
+      </div>
+
+      <div class="card">
+        <h3>Add Expense</h3>
+        <input type="text" id="expenseCategory" placeholder="Expense Category" />
+        <input type="number" id="expenseAmount" placeholder="Amount" />
+        <button id="addExpense">Add Expense</button>
+      </div>
+
+      <div class="card">
+        <h3>Expense History</h3>
+        <ul id="expenseHistory" class="expense-list"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Expense Breakdown (Pie Chart)</h3>
+        <div class="chart-container">
+          <canvas id="expensePieChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="chart.js"></script>
+</body>
+</html>
